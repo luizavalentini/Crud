@@ -16,7 +16,6 @@ export const Home: React.FC = () => {
         </div>
           <button className="button-add" onClick={() => setIsModalVisible(true)}>Adicionar usuários </button>{isModalVisible ? <Modal /> : null}
       </Wrapper>
-
     <Usuarios>
      <div>
       <p>Nome</p>

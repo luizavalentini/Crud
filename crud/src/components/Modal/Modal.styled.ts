@@ -23,34 +23,34 @@ display: flex;
 flex-direction: column;
 padding-top: 1%;
 padding-left: 2%;
-padding-right: 4%;
+padding-right: 2%;
 padding-bottom: 1%;
 }
-img{
-    text-align: center;
-    margin-bottom: 1%;
-}
+
 label{
-    text-align: start;
-    margin-bottom:2%;
-    margin-top:4%;
+   margin-left: -5%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800; 
     color: var(--orange);
 }
 
+img{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
  input{
-    margin-left: 4%;
     border: 1px solid grey;
-    height: 85px;
+    height: 10%;
     width: 100%;
+   margin-bottom: 1%;
  }
 
  select{
-    margin-left: 4%;
     border: 1px solid grey;
-    height: 85px;
     width: 100%;
+    height: 10%;
+    margin-bottom: 4%;
     color: gray;
     border-radius: 20px;
 
