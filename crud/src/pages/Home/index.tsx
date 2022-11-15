@@ -1,8 +1,11 @@
 import { Container, Usuarios, Wrapper, UsuariosAdd } from "./Home.styled";
 import Logo from "../../assets/Logo.svg";
 import { MagnifyingGlass, Pen, Trash } from "phosphor-react";
+import { Modal } from "../../components/Modal";
+import { useState } from "react";
 
 export const Home: React.FC = () => {
+   const [isModalVisible, setIsModalVisible] = useState(false);
   return (
     <Container>
       <img src={Logo}></img>
@@ -11,7 +14,7 @@ export const Home: React.FC = () => {
           <input placeholder="Insira o CPF"></input>
           <button><MagnifyingGlass size={32} color="#919191" weight="bold"/></button>
         </div>
-          <button className="button-add">Adicionar usuários </button>
+          <button className="button-add" onClick={() => setIsModalVisible(true)}>Adicionar usuários </button>{isModalVisible ? <Modal /> : null}
       </Wrapper>
 
     <Usuarios>

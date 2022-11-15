@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-padding-bottom: 20%;
+  padding-bottom: 20%;
   max-width: 1050px;
   margin: 0 auto;
   align-items: center;
