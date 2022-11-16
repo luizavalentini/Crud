@@ -2,15 +2,19 @@ import { Container, Usuarios, Wrapper, UsuariosAdd } from "./Home.styled";
 import Logo from "../../assets/Logo.svg";
 import { MagnifyingGlass, Pen, Trash } from "phosphor-react";
 import { Modal } from "../../components/Modal";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { api } from "../../utils/api";
 import { INewUser } from "../../utils/interface";
+import { UserContext } from "../../context/UserContext";
 
 export const Home: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [users, setUsers] = useState<INewUser[]>([]);
   const [cpfFilter, setcpfFilter] = useState<string>();
   const [currentUser, setCurrentUser] = useState<INewUser>();
+
+
+  const { getUsersWithFilters} = useContext(UserContext);
 
   const getUsers = async () => {
     const response = await api.get("");
@@ -21,13 +25,6 @@ export const Home: React.FC = () => {
   });
   const filterCpf = () => {
     getUsersWithFilters(cpfFilter);
-  };
-
-  const getUsersWithFilters = async (cpfFilter?: string) => {
-    console.log(cpfFilter);
-    const response = await api.get(`/${cpfFilter ? cpfFilter : ""}`);
-    console.log(response.data);
-    setUsers([response.data]);
   };
 
   const deleteUser = (cpf: string) => {

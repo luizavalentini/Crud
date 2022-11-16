@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
   div {
     background-color: var(--white);
     width: 35%;
-    height: 95%;
+    height: 85%;
     border-radius: 20px;
     padding-top: 2%;
     padding-left: 1.6%;
@@ -36,14 +36,14 @@ export const Wrapper = styled.div`
 
   img {
     text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
   }
 
   input {
     border: 1px solid grey;
     height: 25px;
     width: 100%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
   }
 
   input::placeholder {
@@ -71,6 +71,6 @@ export const Wrapper = styled.div`
     font-weight: 700;
     color: var(--white);
     font-family: "Montserrat", sans-serif;
-    margin-bottom: 5%;
+    margin-top: 3%;
   }
 `;

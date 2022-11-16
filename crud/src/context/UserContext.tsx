@@ -1,5 +1,5 @@
 import { api } from "../utils/api";
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 import { IChildren, INewUser } from "../utils/interface";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -10,6 +10,7 @@ export const UserContext = createContext({} as any);
 
 export const UserProvider = ({ children }: IChildren) => {
   const navigate = useNavigate();
+  const [users, setUsers] = useState<INewUser[]>([]);
 
   const createNewUser = async (user: INewUser) => {
     try {
@@ -37,8 +38,15 @@ export const UserProvider = ({ children }: IChildren) => {
     nProgress.done();
   };
 
+  const getUsersWithFilters = async (cpfFilter?: string) => {
+    console.log(cpfFilter);
+    const response = await api.get(`/${cpfFilter ? cpfFilter : ""}`);
+    console.log(response.data);
+    setUsers([response.data]);
+  };
+
   return (
-    <UserContext.Provider value={{ createNewUser, editUser}}>
+    <UserContext.Provider value={{ createNewUser, editUser, getUsersWithFilters}}>
       {children}
     </UserContext.Provider>
   );
