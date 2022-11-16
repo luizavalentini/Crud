@@ -105,14 +105,6 @@ export const UsuariosAdd = styled.div`
     max-width: 65px;
     text-overflow: ellipsis;
   }
-
-  /* p{
-    overflow: hidden;
-      max-width: 50px;
-      max-height: 55px;
-      text-overflow: ellipsis;
-  } */
-
   .button-exlui-edita {
     display: flex;
     gap: 10%;
