@@ -22,7 +22,6 @@ export const Modal = (props: { user?:INewUser, setModalVisible : (value: boolean
     editUser(data);
     setModalVisible(false);
   }
-
   return (
     <Wrapper>
       <div>
@@ -34,7 +33,7 @@ export const Modal = (props: { user?:INewUser, setModalVisible : (value: boolean
             id="nome"
             {...register("nome")}
             type="text"
-            placeholder="Insira seu nome completo"
+            placeholder="Insira seu nome"
           />
 
           <label htmlFor="cpf">CPF:</label>
@@ -69,7 +68,7 @@ export const Modal = (props: { user?:INewUser, setModalVisible : (value: boolean
             id="nomeMae"
             {...register("nomeMae")}
             type="text"
-            placeholder="Insira o nome da sua Mãe"
+            placeholder="Insira o nome da sua mãe"
           ></input>
 
           <label htmlFor="nomePai">Nome da pai:</label>
@@ -78,7 +77,7 @@ export const Modal = (props: { user?:INewUser, setModalVisible : (value: boolean
             id="nomePai"
             {...register("nomePai")}
             type="text"
-            placeholder="Insira o nome do seu Pai"
+            placeholder="Insira o nome do seu pai"
           ></input>
 
           <label htmlFor="tituloEleitor">Título de eleitor:</label>

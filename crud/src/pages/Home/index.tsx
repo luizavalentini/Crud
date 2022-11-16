@@ -48,6 +48,8 @@ const getUsersWithFilters = async (cpfFilter? : string) => {
       setIsModalVisible(true);
    }
 
+   
+
    const editUser = (user: INewUser) => {
       setIsModalVisible(true);
       setCurrentUser(user);
