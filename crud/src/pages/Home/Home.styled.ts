@@ -100,7 +100,7 @@ export const UsuariosAdd = styled.div`
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
   }
-  .cpf, .rg, .cnh, .nomeMae, .nomePai, .tituloEleitor{
+  .nome, .cpf, .rg, .cnh, .nomeMae, .nomePai, .tituloEleitor{
     overflow: hidden;
     max-width: 65px;
     text-overflow: ellipsis;

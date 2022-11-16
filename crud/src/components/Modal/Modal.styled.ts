@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
   div {
     background-color: var(--white);
     width: 35%;
-    height: 90%;
+    height: 95%;
     border-radius: 20px;
     padding-top: 2%;
     padding-left: 1.6%;
@@ -71,7 +71,6 @@ export const Wrapper = styled.div`
     font-weight: 700;
     color: var(--white);
     font-family: "Montserrat", sans-serif;
-    margin-bottom: 3%;
-    margin-top: 4%;
+    margin-bottom: 5%;
   }
 `;
