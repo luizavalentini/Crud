@@ -17,14 +17,13 @@ align-items: center;
 div{
 background-color: var(--white);
 width: 35%;
-height: 95%;
+height: 90%;
 border-radius: 20px;
 display: flex;
 flex-direction: column;
 padding-top: 1%;
 padding-left: 2%;
 padding-right: 2%;
-padding-bottom: 1%;
 }
 
 label{
@@ -59,9 +58,6 @@ img{
     border-radius: 20px;
     width: 200px;
     height: 40px;
-    margin-top: 4%;
-    margin-bottom: 2%;
-    margin-left: 30%;
     background-color: var(--orange);
     border: none;
     font-size: 15px;
@@ -69,7 +65,6 @@ img{
     color: var(--white);
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 3%;
-    align-items: center;
     padding-top: 3%;
     padding-bottom: 3%;
  }

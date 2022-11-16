@@ -1,24 +1,33 @@
 import React, { useContext } from "react";
 import { Wrapper } from "./Modal.styled";
 import Logo2 from "../../assets/Logo-2.svg";
+import editaUsuario from "../../assets/edita-usuario.svg"
 import { useForm } from "react-hook-form";
 import { INewUser } from "../../utils/interface";
 import { UserContext } from "../../context/UserContext";
 
-export const Modal: React.FC = () => {
+export const Modal = (props: { user?:INewUser, setModalVisible : (value: boolean) => void}) => {
+  const {setModalVisible, user} = props;
 
-  const { register, handleSubmit } = useForm<INewUser>();
-  const { createNewUser } = useContext(UserContext);
+
+  const { register, handleSubmit } = useForm<INewUser>({defaultValues:user})
+  const { createNewUser, editUser } = useContext(UserContext);
 
   const addNewUser = (data: INewUser) => {
     createNewUser(data);
+    setModalVisible(false);
   };
+
+  const handleEditUser = (data: INewUser) => {
+    editUser(data);
+    setModalVisible(false);
+  }
 
   return (
     <Wrapper>
       <div>
-        <img src={Logo2}></img>
-        <form onSubmit={handleSubmit(addNewUser)}>
+        <img src={user? editaUsuario : Logo2}></img>
+        <form onSubmit={user? handleSubmit(handleEditUser) : handleSubmit(addNewUser)}>
           <label htmlFor="nome">Nome Completo:</label>
           <input
             required
@@ -86,12 +95,10 @@ export const Modal: React.FC = () => {
             <option value="F">Feminino</option>
             <option value="M">Masculino</option>
           </select>
-
-          <input type="submit" value="adicionar usuário" />
+          <button type="submit" >{user? "Editar usuário" : "Adicionar usuário"}</button>
         </form>
       </div>
     </Wrapper>
   );
 };
 
-// {...register("sexo")}
