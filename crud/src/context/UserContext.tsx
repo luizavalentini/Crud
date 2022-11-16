@@ -37,7 +37,6 @@ export const UserProvider = ({ children }: IChildren) => {
     nProgress.done();
   };
 
-
   return (
     <UserContext.Provider value={{ createNewUser, editUser}}>
       {children}

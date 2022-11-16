@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
+  background-size: 50% auto;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;

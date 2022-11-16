@@ -35,7 +35,7 @@ export const Wrapper = styled.div`
     border: 1px solid grey;
     color: grey;
     font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
   .button-add {
     border-radius: 20px;
@@ -47,7 +47,7 @@ export const Wrapper = styled.div`
     font-size: 15px;
     font-weight: 700;
     color: var(--white);
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
   button {
     background-color: white;
@@ -66,12 +66,12 @@ export const Usuarios = styled.div`
   padding-left: 1%;
   padding-right: 1%;
   border-radius: 8px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--white);
 
   p {
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif
+    font-family: "Montserrat", sans-serif;
   }
   div {
     align-items: center;
@@ -86,19 +86,38 @@ export const UsuariosAdd = styled.div`
   margin-right: 2%;
 
   .usuarios-adicionados {
+    text-align: center;
     background-color: bisque;
     display: flex;
     align-items: center;
-    gap: 5%;
+    gap: 8.5%;
     height: 65px;
     border-radius: 8px;
     padding-left: 2%;
-    font-family: 'Montserrat', sans-serif;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
   }
-  .button-exlui-edita{
+  .cpf, .rg, .cnh, .nomeMae, .nomePai, .tituloEleitor{
+    overflow: hidden;
+    max-width: 65px;
+    text-overflow: ellipsis;
+  }
+
+  /* p{
+    overflow: hidden;
+      max-width: 50px;
+      max-height: 55px;
+      text-overflow: ellipsis;
+  } */
+
+  .button-exlui-edita {
     display: flex;
     gap: 10%;
-    margin-left: -2%;
+  }
+  button{
+ border-radius: 3px;
   }
 `;
