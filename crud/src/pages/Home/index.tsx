@@ -75,7 +75,7 @@ export const Home: React.FC = () => {
           <p>CNH</p>
           <p>Nome da Mãe</p>
           <p>Nome do Pai</p>
-          <p>Título de eleitor</p>
+          <p>Título</p>
           <p>Sexo</p>
           <p>Ações</p>
         </div>

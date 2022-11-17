@@ -62,21 +62,28 @@ export const Usuarios = styled.div`
   margin-left: 2%;
   margin-right: 2%;
   height: 65px;
-  padding-top: 2%;
+  /* padding-top: 2%;
   padding-left: 1%;
-  padding-right: 1%;
+  padding-right: 1%; */
   border-radius: 8px;
   font-family: "Montserrat", sans-serif;
   color: var(--white);
-
+  display: grid;
+  align-content: center;
+  
   p {
+    font-size: 14px;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
+    align-self: center;
+    justify-self: center;
   }
   div {
-    align-items: center;
-    display: flex;
-    gap: 5%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-content: center;
+    justify-content: center;
+
   }
 `;
 
@@ -87,27 +94,32 @@ export const UsuariosAdd = styled.div`
 
   .usuarios-adicionados {
     text-align: center;
-    background-color: bisque;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
     align-items: center;
-    gap: 8.5%;
+    justify-content: center;
     height: 65px;
     border-radius: 8px;
-    padding-left: 2%;
+    /* padding-left: 2%;
     padding-right: 2%;
     padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 2%; */
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
+    background-color: bisque;
   }
   .nome, .cpf, .rg, .cnh, .nomeMae, .nomePai, .tituloEleitor{
     overflow: hidden;
-    max-width: 65px;
+    max-width: 70px;
+    max-height: 40px;
     text-overflow: ellipsis;
+    justify-self: center;
   }
   .button-exlui-edita {
     display: flex;
     gap: 10%;
+    justify-self: center;
+
   }
   button{
  border-radius: 3px;
