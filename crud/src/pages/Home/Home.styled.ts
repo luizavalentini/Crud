@@ -62,15 +62,12 @@ export const Usuarios = styled.div`
   margin-left: 2%;
   margin-right: 2%;
   height: 65px;
-  /* padding-top: 2%;
-  padding-left: 1%;
-  padding-right: 1%; */
   border-radius: 8px;
   font-family: "Montserrat", sans-serif;
   color: var(--white);
   display: grid;
   align-content: center;
-  
+
   p {
     font-size: 14px;
     font-weight: bold;
@@ -83,7 +80,6 @@ export const Usuarios = styled.div`
     grid-template-columns: repeat(9, 1fr);
     align-content: center;
     justify-content: center;
-
   }
 `;
 
@@ -108,7 +104,13 @@ export const UsuariosAdd = styled.div`
     font-weight: bold;
     background-color: bisque;
   }
-  .nome, .cpf, .rg, .cnh, .nomeMae, .nomePai, .tituloEleitor{
+  .nome,
+  .cpf,
+  .rg,
+  .cnh,
+  .nomeMae,
+  .nomePai,
+  .tituloEleitor {
     overflow: hidden;
     max-width: 70px;
     max-height: 40px;
@@ -119,9 +121,8 @@ export const UsuariosAdd = styled.div`
     display: flex;
     gap: 10%;
     justify-self: center;
-
   }
-  button{
- border-radius: 3px;
+  button {
+    border-radius: 3px;
   }
 `;
