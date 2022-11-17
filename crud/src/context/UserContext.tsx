@@ -1,5 +1,5 @@
 import { api } from "../utils/api";
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 import { IChildren, INewUser } from "../utils/interface";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";

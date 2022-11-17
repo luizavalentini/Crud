@@ -9,12 +9,10 @@ import { UserContext } from "../../context/UserContext";
 
 export const Home: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  // const [users, setUsers] = useState<INewUser[]>([]);
   const [cpfFilter, setcpfFilter] = useState<string>();
   const [currentUser, setCurrentUser] = useState<INewUser>();
 
-
-  const { getUsersWithFilters, users, setUsers} = useContext(UserContext);
+  const { getUsersWithFilters, users, setUsers } = useContext(UserContext);
 
   const getUsers = async () => {
     const response = await api.get("");
@@ -22,7 +20,7 @@ export const Home: React.FC = () => {
   };
   useEffect(() => {
     getUsers();
-  },[]);
+  }, []);
 
   const filterCpf = () => {
     getUsersWithFilters(cpfFilter);
@@ -88,7 +86,7 @@ export const Home: React.FC = () => {
 
               <p className="cpf">{user.cpf}</p>
 
-              <p  className="rg">{user.rg}</p>
+              <p className="rg">{user.rg}</p>
 
               <p className="cnh">{user.cnh}</p>
 
